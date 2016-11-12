@@ -1,12 +1,27 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>m800.akka.java</groupId>
+  <groupId>m800.akka</groupId>
   <artifactId>m800</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>m800</name>
   <url>http://maven.apache.org</url>
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>m800.akka.LogFileScanner</mainClass>
+                    <arguments>
+                        <argument></argument>
+                    </arguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -14,5 +29,17 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-actor</artifactId>
+      <version>2.0.5</version>
+    </dependency>
   </dependencies>
+  <repositories>
+    <repository>
+      <id>typesafe</id>
+      <name>Typesafe Repository</name>
+      <url>http://repo.typesafe.com/typesafe/releases/</url>
+    </repository>
+  </repositories>
 </project>

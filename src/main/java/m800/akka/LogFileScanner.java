@@ -22,10 +22,10 @@ public class LogFileScanner {
     // Create an Akka system
     system = ActorSystem.create("LogFileScannerSytem");
  
-    // create the master
+    // create the actor
     fileScanner = system.actorOf(new Props(FileScanner.class), "fileScanner");
 
-    // start the calculation
+    // invoke the actor
     fileScanner.tell("scan");
   }
 }

@@ -1,6 +1,7 @@
 # akka-log-processor
 
 Sample Log Processor implemented in Java 8 using Akka (Actor model based concurrency)
+
 Needs **maven** to build
 
 To run, first make a directory **logs/**

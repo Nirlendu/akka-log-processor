@@ -12,7 +12,7 @@ Then run
 make all
 ```
 
-Alterntively, you can edit makefile to pass any directory with log files inside as an argument to the compliled jar
+Alternatively, you can edit makefile to pass any directory with log files inside as an argument to the compiled jar
 
 ```
 java -jar target/m800-1.0-jar-with-dependencies.jar DIRECTORY-CONTAINING-LOG-FILES/

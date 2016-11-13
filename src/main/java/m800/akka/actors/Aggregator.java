@@ -2,7 +2,7 @@
  * Nirlendu Saha
  */
 
-package m800.akka;
+package m800.akka.actors;
  
 import akka.actor.ActorRef;
 import akka.actor.Props;
@@ -17,7 +17,7 @@ public class Aggregator extends UntypedActor {
       this.count = this.count + 1;
     }
     else if (message == "end-of-file"){
-      System.out.println(this.count);
+      System.out.println("No. of lines : " + Integer.toString(this.count));
     }
     else if (message == "start-of-file"){
       this.count = 0;
